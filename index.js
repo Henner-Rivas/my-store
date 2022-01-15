@@ -6,7 +6,7 @@ const app = express();
 const port =process.env.PORT  || 3000;
 
 app.use(express.json())
- const whitelist = ['http://localhost:3000', 'http://127.0.0.1:5500'];
+/*  const whitelist = ['http://localhost:3000', 'http://127.0.0.1:5500'];
 const options = {
   origin: (origin, callback) => {
     if (whitelist.includes(origin) || !origin) {
@@ -15,8 +15,8 @@ const options = {
       callback(new Error('no permitido'));
     }
   }
-}
-app.use(cors(options));
+} */
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('hello my sever in express');
