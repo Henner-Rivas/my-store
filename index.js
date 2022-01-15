@@ -3,7 +3,7 @@ const cors= require('cors')
 const routerApi  = require('./routes');
 const { logErrors, errorHandler, boomErrorHandler}= require('./middleware/errorHandle')
 const app = express();
-const port =process.env.PORT  || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json())
 /*  const whitelist = ['http://localhost:3000', 'http://127.0.0.1:5500'];
